@@ -20,7 +20,6 @@ def generate_dataset():
             img_id+=1
             face = cv2.resize(face_cropped(frame), (200,200))
             face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
-            #file_name_path = "data/"+"Ishwar."+str(img_id)+".jpg"
             source_output_img = "Face_Dataset/"+"eka."+str(img_id)+'.jpg'
             cv2.imwrite(source_output_img, face)
             cv2.putText(face, str(img_id), (50,50), cv2.FONT_HERSHEY_COMPLEX, 1, (0,255,0), 2 )
@@ -31,5 +30,5 @@ def generate_dataset():
                 
     vid_realTime.release()
     cv2.destroyAllWindows()
-    print("Collecting samples is completed !!!")
+    print("Collecting is Done... !!!")
 generate_dataset()
